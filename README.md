@@ -28,4 +28,14 @@ This widget serves 2 purposes,
 1) use as it is.
 2) how-to for implementing Wicket components using wiQuery.
 
+## Demo
+
+1. cd mbs-core
+2. mvn install
+3. cd mbs-demo
+4. mvn jetty:run
+5. Log on to [http://localhost:8080/mbs-demo/] (http://localhost:8080/mbs-demo/)
+
+Do not run mvn install on base directory unless you want to install both mbs-core and mbs-demo to your Maven repository.
+
 Lim, Teck Hooi
