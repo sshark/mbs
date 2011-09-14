@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.thlim</groupId>
+    <artifactId>mbs-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>Multi Boxes Selection Parent</name>
+    <modules>
+        <module>mbs-core</module>
+        <module>mbs-demo</module>
+    </modules>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Lim, Teck Hooi</name>
+            <email>sshark@gmail.com</email>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.odlabs.wiquery</groupId>
+                <artifactId>wiquery</artifactId>
+                <version>1.2.4</version>
+            </dependency>
+
+            <dependency>
+            <groupId>org.thlim</groupId>
+            <artifactId>mbs-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+            <!-- Logging -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.6.1</version>
+            </dependency>
+
+            <!-- Wicket -->
+            <dependency>
+                <groupId>org.apache.wicket</groupId>
+                <artifactId>wicket</artifactId>
+                <version>${wicket.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.wicket</groupId>
+                <artifactId>wicket-extensions</artifactId>
+                <version>${wicket.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <repositories>
+        <repository>
+            <id>wiquery</id>
+            <name>wiquery wicket components</name>
+            <url>http://wiquery.googlecode.com/svn/repo/</url>
+        </repository>
+    </repositories>
+    <properties>
+        <wicket.version>1.4.18</wicket.version>
+        <wicketstuff.version>1.4.18</wicketstuff.version>
+        <wiquery.version>1.2.4</wiquery.version>
+    </properties>
+</project>

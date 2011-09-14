@@ -1,0 +1,28 @@
+.MultiBoxesSelection .ui-selecting
+{
+    background: #FECA40;
+}
+
+.MultiBoxesSelection .ui-selected
+{
+    background: #F39814;
+    color: white;
+}
+
+.MultiBoxesSelection
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.MultiBoxesSelection li
+{
+    border: 1px solid black;
+    margin: 3px;
+    padding: 1px;
+    float: left;
+    width: 100px;
+    height: 80px;
+    text-align: center;
+}
