@@ -3,5 +3,5 @@
 .demo .MultiBoxesSelection li {font-size: 4em;}
 .selection-box {width:500px}
 .demo-description {clear:both;}
-.feedbackPanel { font-size: 1.5em;padding-left:0}
-.feedbackPanelERROR {color : red;list-style-type: none}
+.feedbackPanel { font-size: 1.5em;padding-left:0;list-style-type: none}
+.feedbackPanelERROR {color : red}
