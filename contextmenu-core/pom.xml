@@ -7,10 +7,9 @@
         <artifactId>mbs-parent</artifactId>
         <version>1.0</version>
     </parent>
-    <artifactId>mbs-demo</artifactId>
-    <packaging>war</packaging>
-    <name>Multi Boxes Selection Demo</name>
-    <description>Multi boxes selection demo page</description>
+    <artifactId>contextmenu-core</artifactId>
+    <name>Context Menu</name>
+    <description>Context Menu</description>
 
     <licenses>
         <license>
@@ -29,6 +28,11 @@
     </developers>
 
     <dependencies>
+        <dependency>
+            <groupId>org.odlabs.wiquery</groupId>
+            <artifactId>wiquery-core</artifactId>
+        </dependency>
+
         <!--  WICKET DEPENDENCIES -->
         <dependency>
             <groupId>org.apache.wicket</groupId>
@@ -40,16 +44,7 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
         </dependency>
-
-        <!--  JETTY DEPENDENCIES FOR TESTING  -->
-        <dependency>
-            <groupId>org.mortbay.jetty</groupId>
-            <artifactId>jetty</artifactId>
-            <version>${jetty.version}</version>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
-
     <build>
         <resources>
             <resource>

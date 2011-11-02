@@ -7,10 +7,10 @@
         <artifactId>mbs-parent</artifactId>
         <version>1.0</version>
     </parent>
-    <artifactId>mbs-demo</artifactId>
+    <artifactId>contextmenu-demo</artifactId>
     <packaging>war</packaging>
-    <name>Multi Boxes Selection Demo</name>
-    <description>Multi boxes selection demo page</description>
+    <name>jQuery Context Menu Demo</name>
+    <description>jQuery context menu demo page</description>
 
     <licenses>
         <license>
@@ -31,8 +31,8 @@
     <dependencies>
         <!--  WICKET DEPENDENCIES -->
         <dependency>
-            <groupId>org.apache.wicket</groupId>
-            <artifactId>wicket</artifactId>
+            <groupId>org.odlabs.wiquery</groupId>
+            <artifactId>wiquery-core</artifactId>
         </dependency>
 
         <!-- LOGGING DEPENDENCIES - LOG4J -->
@@ -47,6 +47,11 @@
             <artifactId>jetty</artifactId>
             <version>${jetty.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.thlim</groupId>
+            <artifactId>contextmenu-core</artifactId>
         </dependency>
     </dependencies>
 

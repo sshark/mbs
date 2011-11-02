@@ -30,7 +30,7 @@
     <dependencies>
         <dependency>
             <groupId>org.odlabs.wiquery</groupId>
-            <artifactId>wiquery</artifactId>
+            <artifactId>wiquery-core</artifactId>
         </dependency>
 
         <!--  WICKET DEPENDENCIES -->

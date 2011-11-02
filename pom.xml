@@ -10,6 +10,8 @@
     <modules>
         <module>mbs-core</module>
         <module>mbs-demo</module>
+        <module>contextmenu-core</module>
+        <module>contextmenu-demo</module>
     </modules>
 
     <licenses>
@@ -30,17 +32,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- wiQuery -->
             <dependency>
                 <groupId>org.odlabs.wiquery</groupId>
-                <artifactId>wiquery</artifactId>
-                <version>1.2.4</version>
+                <artifactId>wiquery-core</artifactId>
+                <version>${wiquery.version}</version>
             </dependency>
-
-            <dependency>
-            <groupId>org.thlim</groupId>
-            <artifactId>mbs-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
 
             <!-- Logging -->
             <dependency>
@@ -70,8 +67,8 @@
         </repository>
     </repositories>
     <properties>
-        <wicket.version>1.4.18</wicket.version>
-        <wicketstuff.version>1.4.18</wicketstuff.version>
-        <wiquery.version>1.2.4</wiquery.version>
+        <wicket.version>1.5.1</wicket.version>
+        <wicketstuff.version>1.5.1</wicketstuff.version>
+        <wiquery.version>1.5-SNAPSHOT</wiquery.version>
     </properties>
 </project>
