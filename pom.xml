@@ -10,8 +10,10 @@
     <modules>
         <module>mbs-core</module>
         <module>mbs-demo</module>
+        <!--
         <module>contextmenu-core</module>
         <module>contextmenu-demo</module>
+        -->
     </modules>
 
     <licenses>
@@ -39,6 +41,12 @@
                 <version>${wiquery.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.odlabs.wiquery</groupId>
+                <artifactId>wiquery-jquery-ui</artifactId>
+                <version>${wiquery.version}</version>
+            </dependency>
+
             <!-- Logging -->
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -49,7 +57,7 @@
             <!-- Wicket -->
             <dependency>
                 <groupId>org.apache.wicket</groupId>
-                <artifactId>wicket</artifactId>
+                <artifactId>wicket-core</artifactId>
                 <version>${wicket.version}</version>
             </dependency>
             <dependency>

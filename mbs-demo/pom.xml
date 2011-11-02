@@ -32,13 +32,24 @@
         <!--  WICKET DEPENDENCIES -->
         <dependency>
             <groupId>org.apache.wicket</groupId>
-            <artifactId>wicket</artifactId>
+            <artifactId>wicket-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.odlabs.wiquery</groupId>
+            <artifactId>wiquery-jquery-ui</artifactId>
         </dependency>
 
         <!-- LOGGING DEPENDENCIES - LOG4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.thlim</groupId>
+            <artifactId>mbs-core</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <!--  JETTY DEPENDENCIES FOR TESTING  -->
@@ -93,11 +104,12 @@
             </plugin>
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
-                <artifactId>maven-jetty-plugin</artifactId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty.version}</version>
             </plugin>
         </plugins>
     </build>
     <properties>
-        <jetty.version>6.1.4</jetty.version>
+        <jetty.version>7.5.3</jetty.version>
     </properties>
 </project>

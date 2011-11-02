@@ -33,10 +33,15 @@
             <artifactId>wiquery-core</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.odlabs.wiquery</groupId>
+            <artifactId>wiquery-jquery-ui</artifactId>
+        </dependency>
+
         <!--  WICKET DEPENDENCIES -->
         <dependency>
             <groupId>org.apache.wicket</groupId>
-            <artifactId>wicket</artifactId>
+            <artifactId>wicket-core</artifactId>
         </dependency>
 
         <!-- LOGGING DEPENDENCIES - LOG4J -->

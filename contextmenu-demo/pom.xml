@@ -35,6 +35,11 @@
             <artifactId>wiquery-core</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.odlabs.wiquery</groupId>
+            <artifactId>wiquery-jquery-ui</artifactId>
+        </dependency>
+
         <!-- LOGGING DEPENDENCIES - LOG4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -52,6 +57,7 @@
         <dependency>
             <groupId>org.thlim</groupId>
             <artifactId>contextmenu-core</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 
