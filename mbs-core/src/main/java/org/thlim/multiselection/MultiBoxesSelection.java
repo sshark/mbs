@@ -19,6 +19,7 @@ package org.thlim.multiselection;
 
 import java.util.List;
 
+import org.apache.wicket.markup.html.IHeaderResponse;
 import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.FormComponentPanel;
@@ -62,6 +63,7 @@ public class MultiBoxesSelection<T> extends FormComponentPanel<Integer>
             }
         };
         container.add(tile);
+        container.add(behavior);
 
         behavior.setMillisDelay(1000);
 
@@ -83,9 +85,7 @@ public class MultiBoxesSelection<T> extends FormComponentPanel<Integer>
     @Override
     protected void onBeforeRender()
     {
-        container.add(behavior);
-
-        // CompoundPropertyModel does not popular parents Model during construction so it has to be
+        // CompoundPropertyModel does not populate parents Model during construction so it has to be
         // done here.
         selections.setModel(getModel());
 

@@ -36,8 +36,8 @@ public class DemoApplication extends WebApplication
 	/**
 	 * @see org.apache.wicket.Application#getHomePage()
 	 */
-	public Class<MultiBoxesSelPage> getHomePage()
+	public Class<MultiBoxesDemoPage> getHomePage()
 	{
-		return MultiBoxesSelPage.class;
+		return MultiBoxesDemoPage.class;
 	}
 }

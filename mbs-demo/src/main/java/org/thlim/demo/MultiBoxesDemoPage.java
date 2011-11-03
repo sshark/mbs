@@ -19,13 +19,16 @@ package org.thlim.demo;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
+import org.apache.wicket.markup.html.IHeaderResponse;
+import org.apache.wicket.request.resource.CssPackageResource;
+import org.apache.wicket.request.resource.PackageResourceReference;
 import org.thlim.multiselection.MultiBoxesSelection;
 import org.apache.wicket.Component;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
 import org.apache.wicket.feedback.ComponentFeedbackMessageFilter;
-import org.apache.wicket.markup.html.CSSPackageResource;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
@@ -33,11 +36,11 @@ import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 
-public class MultiBoxesSelPage extends WebPage
+public class MultiBoxesDemoPage extends WebPage
 {
     private int numSelectionBoxes = 3;
 
-    public MultiBoxesSelPage()
+    public MultiBoxesDemoPage()
     {
         setDefaultModel(new CompoundPropertyModel(this));
 
@@ -135,13 +138,18 @@ public class MultiBoxesSelPage extends WebPage
             {
                 form.error(alphabetsSelectionBoxes.getFeedbackMessage().getMessage());
                 alphabetsSelectionBoxes.getFeedbackMessage().markRendered();
-                target.addComponent(alphabetsFeedbackPanel);
+                target.add(alphabetsFeedbackPanel);
             }
         });
         add(alphabetsForm);
         alphabetsForm.add(alphabetsSelectionBoxes.setMaxSelections(8));
         alphabetsForm.add(alphabetsFeedbackPanel);
 
-        add(CSSPackageResource.getHeaderContribution(getClass(), "MultiBoxesSelPage.css"));
+    }
+
+    @Override
+    public void renderHead(IHeaderResponse response)
+    {
+        response.renderCSSReference(new PackageResourceReference(getClass(), "multiboxes-demo.css"));
     }
 }

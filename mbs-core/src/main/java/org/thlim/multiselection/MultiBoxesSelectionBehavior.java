@@ -17,14 +17,16 @@
 
 package org.thlim.multiselection;
 
-import org.apache.wicket.markup.html.resources.JavascriptResourceReference;
+import org.apache.wicket.Component;
+import org.apache.wicket.markup.html.IHeaderResponse;
+import org.apache.wicket.request.resource.CssResourceReference;
+import org.apache.wicket.request.resource.PackageResourceReference;
 import org.odlabs.wiquery.core.behavior.WiQueryAbstractBehavior;
-import org.odlabs.wiquery.core.commons.WiQueryResourceManager;
 import org.odlabs.wiquery.core.javascript.JsQuery;
 import org.odlabs.wiquery.core.javascript.JsStatement;
 import org.odlabs.wiquery.core.options.Options;
 import org.odlabs.wiquery.ui.effects.CoreEffectJavaScriptResourceReference;
-import org.odlabs.wiquery.ui.widget.WidgetJavascriptResourceReference;
+import org.odlabs.wiquery.ui.widget.WidgetJavaScriptResourceReference;
 
 public class MultiBoxesSelectionBehavior extends WiQueryAbstractBehavior
 {
@@ -57,22 +59,11 @@ public class MultiBoxesSelectionBehavior extends WiQueryAbstractBehavior
     }
 
     @Override
-    public void contribute(WiQueryResourceManager wiQueryResourceManager)
+    public void renderHead(Component component, IHeaderResponse response)
     {
-        // core.ui.js from trunk that works with Webkit browsers
-        /*
-        wiQueryResourceManager
-                .addJavaScriptResource(new JavascriptResourceReference(getClass(), "js/ui.core.trunk.js"));
-        */
-        // effects.core.js from trunk that works with Webkit browsers
-        wiQueryResourceManager.addJavaScriptResource(WidgetJavascriptResourceReference.get());
-        /*
-        wiQueryResourceManager
-                .addJavaScriptResource(new JavascriptResourceReference(getClass(), "js/effects.core.trunk.js"));
-        */
-        wiQueryResourceManager.addJavaScriptResource(CoreEffectJavaScriptResourceReference.get());
-        wiQueryResourceManager
-                .addJavaScriptResource(new JavascriptResourceReference(getClass(), "js/MultiBoxesSelection.js"));
-        wiQueryResourceManager.addCssResource(getClass(), "MultiBoxesSelection.css");
+        response.renderCSSReference(new CssResourceReference(getClass(), "multiboxes-selection.css"));
+        response.renderJavaScriptReference(WidgetJavaScriptResourceReference.get());
+        response.renderJavaScriptReference(CoreEffectJavaScriptResourceReference.get());
+        response.renderJavaScriptReference(new PackageResourceReference(getClass(), "js/multiboxes.selection.js"));
     }
 }

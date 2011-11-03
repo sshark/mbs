@@ -94,10 +94,11 @@
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>maven-jetty-plugin</artifactId>
+                <version>${jetty.version}</version>
             </plugin>
         </plugins>
     </build>
     <properties>
-        <jetty.version>6.1.4</jetty.version>
+        <jetty.version>6.1.26</jetty.version>
     </properties>
 </project>
