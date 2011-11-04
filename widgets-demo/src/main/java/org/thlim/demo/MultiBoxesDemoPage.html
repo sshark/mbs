@@ -1,0 +1,26 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+</head>
+<body>
+<div class="demo">
+    <form wicket:id="numbersForm">
+        <div class="selection-box">
+            <div style="font-size:1.5em">Please pick at least 4 boxes (Max. 5)</div>
+            <div wicket:id="numSelectionBoxes" class="selection"></div>
+            <div style="clear:both" wicket:id="feedback">[feedback]</div>
+            <input type="submit" wicket:id="numbersSubmitLink" value="Submit"/>
+        </div>
+    </form>
+    <form wicket:id="alphabetsForm">
+        <div class="selection-box">
+            <div style="font-size:1.5em">Please pick at least 3 boxes (Max. 8)</div>
+            <div wicket:id="alphaSelectionBoxes" class="selection"></div>
+            <div style="clear:both" wicket:id="feedback">[feedback]</div>
+            <input type="submit" wicket:id="alphabetsSubmitLink" value="Submit"/>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+

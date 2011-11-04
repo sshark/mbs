@@ -9,9 +9,8 @@
     <name>Multi Boxes Selection Parent</name>
     <modules>
         <module>mbs-core</module>
-        <module>mbs-demo</module>
         <module>contextmenu-core</module>
-        <module>contextmenu-demo</module>
+        <module>widgets-demo</module>
     </modules>
 
     <licenses>
@@ -81,7 +80,13 @@
 
             <dependency>
                 <groupId>org.thlim</groupId>
-                <artifactId>mbs-demo</artifactId>
+                <artifactId>contextmenu-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.thlim</groupId>
+                <artifactId>widgets-demo</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
@@ -107,6 +112,6 @@
         <wicket.version>1.5.1</wicket.version>
         <wicketstuff.version>1.5.1</wicketstuff.version>
         <wiquery.version>1.5-SNAPSHOT</wiquery.version>
-        <jetty.version>6.1.26</jetty.version>
+        <jetty.version>7.4.2.v20110526</jetty.version>
     </properties>
 </project>
