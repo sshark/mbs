@@ -6,8 +6,10 @@
         <groupId>org.thlim</groupId>
         <artifactId>mbs-parent</artifactId>
         <version>1.0</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>mbs-core</artifactId>
+    <packaging>jar</packaging>
     <name>Multi Boxes Selection Core</name>
     <description>Multi boxes selection widget with minimum and maximum selections control</description>
 

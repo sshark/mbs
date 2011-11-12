@@ -6,6 +6,7 @@
         <groupId>org.thlim</groupId>
         <artifactId>mbs-parent</artifactId>
         <version>1.0</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>contextmenu-core</artifactId>
     <name>Context Menu</name>
@@ -42,6 +43,12 @@
         <dependency>
             <groupId>org.apache.wicket</groupId>
             <artifactId>wicket-core</artifactId>
+        </dependency>
+
+        <!-- LOGGING DEPENDENCIES - LOG4J -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
         </dependency>
 
         <!-- LOGGING DEPENDENCIES - LOG4J -->
