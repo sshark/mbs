@@ -1,9 +1,10 @@
 package org.thlim.demo;
 
-import org.mortbay.jetty.Connector;
-import org.mortbay.jetty.Server;
-import org.mortbay.jetty.bio.SocketConnector;
-import org.mortbay.jetty.webapp.WebAppContext;
+
+import org.eclipse.jetty.server.Connector;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.server.bio.SocketConnector;
+import org.eclipse.jetty.webapp.WebAppContext;
 
 public class StartDemoServer
 {
@@ -20,7 +21,7 @@ public class StartDemoServer
 
 		WebAppContext context = new WebAppContext();
 		context.setServer(server);
-		context.setContextPath("/mbs-demo");
+		context.setContextPath("/demo");
 		context.setWar("src/main/webapp");
 
 		// START JMX SERVER
@@ -29,7 +30,7 @@ public class StartDemoServer
 		// server.getContainer().addEventListener(mBeanContainer);
 		// mBeanContainer.start();
 
-		server.addHandler(context);
+        server.setHandler(context);
 
 		try {
 			System.out.println(">>> STARTING EMBEDDED JETTY SERVER, PRESS ANY KEY TO STOP");

@@ -109,8 +109,8 @@
         </repository>
     </repositories>
     <properties>
-        <wicket.version>1.5.1</wicket.version>
-        <wicketstuff.version>1.5.1</wicketstuff.version>
+        <wicket.version>1.5.3</wicket.version>
+        <wicketstuff.version>1.5.3</wicketstuff.version>
         <wiquery.version>1.5-SNAPSHOT</wiquery.version>
         <jetty.version>7.4.2.v20110526</jetty.version>
     </properties>

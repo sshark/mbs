@@ -26,18 +26,10 @@ import org.apache.wicket.protocol.http.WebApplication;
 public class DemoApplication extends WebApplication
 {
     /**
-     * Constructor
-     */
-	public DemoApplication()
-	{
-
-	}
-
-	/**
 	 * @see org.apache.wicket.Application#getHomePage()
 	 */
-	public Class<MultiBoxesDemoPage> getHomePage()
+	public Class<DemoPage> getHomePage()
 	{
-		return MultiBoxesDemoPage.class;
+		return DemoPage.class;
 	}
 }
