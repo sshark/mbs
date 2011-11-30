@@ -1,16 +1,13 @@
 package org.thlim.widgets.contextmenu;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.wicket.Component;
+import org.apache.wicket.behavior.Behavior;
 import org.apache.wicket.markup.html.IHeaderResponse;
 import org.apache.wicket.request.resource.CssResourceReference;
 import org.apache.wicket.request.resource.PackageResourceReference;
-import org.odlabs.wiquery.core.behavior.WiQueryAbstractBehavior;
-import org.odlabs.wiquery.core.javascript.JsQuery;
+import org.odlabs.wiquery.core.IWiQueryPlugin;
 import org.odlabs.wiquery.core.javascript.JsStatement;
-import org.odlabs.wiquery.core.options.Options;
+import org.odlabs.wiquery.ui.commons.WiQueryUIPlugin;
 
 /**
  *
@@ -20,65 +17,36 @@ import org.odlabs.wiquery.core.options.Options;
  *
  */
 
-public class ContextMenu extends WiQueryAbstractBehavior
+@WiQueryUIPlugin
+public class ContextMenu extends Behavior implements IWiQueryPlugin
 {
 
-    static public enum Trigger {
-        HOVER("'hover'"),
-        LEFT("'left'"),
-        RIGHT("'right'");
 
-        private final String value;
+    private ContextMenuOptions options;
 
-        Trigger(String value)
-        {
-            this.value = value;
-        }
-
-        @Override
-        public String toString()
-        {
-            return value;
-        }
-    }
-
-    private List<ContextMenuItem> menuItems = new ArrayList<ContextMenuItem>();
-    private Options options = new Options();
-
-    @Override
     public JsStatement statement()
     {
-        JsStatement statement;
-        if (options.getJavaScriptOptions().length() > 2)
-        {
-            statement = new JsQuery(this.getComponent()).$().chain("contextMenu", options.getJavaScriptOptions());
-        }
-        else
-        {
-            statement = new JsQuery(this.getComponent()).$().chain("contextMenu");
-        }
-        return statement;
+        return new JsStatement().$().chain("contextMenu", options.getJavaScriptOptions());
     }
 
-    public ContextMenu() {
-        options.put("trigger", Trigger.RIGHT.toString());
-    };
+    public ContextMenu(String selector) {
+        this(selector, ContextMenuOptions.Trigger.RIGHT);
+    }
 
-    public ContextMenu(Options options)
+    public ContextMenu(String selector, ContextMenuOptions.Trigger trigger)
+    {
+        options = new ContextMenuOptions(selector);
+        options.setTrigger(trigger);
+    }
+
+    public ContextMenu(ContextMenuOptions options)
     {
         this.options = options;
     }
 
-    public ContextMenu setTrigger(Trigger trigger)
+    public ContextMenuOptions getOptions()
     {
-        options.put("trigger", trigger.toString());
-        return this;
-    }
-
-    public ContextMenu addItem(ContextMenuItem item)
-    {
-        menuItems.add(item);
-        return this;
+        return options;
     }
 
     @Override
@@ -87,5 +55,15 @@ public class ContextMenu extends WiQueryAbstractBehavior
         response.renderJavaScriptReference(new PackageResourceReference(getClass(), "jquery.ui.position.js"));
         response.renderJavaScriptReference(new PackageResourceReference(getClass(), "jquery.contextMenu.js"));
         response.renderCSSReference(new CssResourceReference(getClass(), "jquery.contextMenu.css"));
+    }
+
+    public static ContextMenu forClass(String selector)
+    {
+        return new ContextMenu("." + selector);
+    }
+
+    public static ContextMenu forId(String selector)
+    {
+        return new ContextMenu("#" + selector);
     }
 }

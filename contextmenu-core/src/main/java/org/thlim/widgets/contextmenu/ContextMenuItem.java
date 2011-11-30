@@ -1,6 +1,7 @@
 package org.thlim.widgets.contextmenu;
 
 import org.apache.wicket.ajax.markup.html.AjaxLink;
+import org.odlabs.wiquery.core.options.IListItemOption;
 
 /**
  *
@@ -9,7 +10,7 @@ import org.apache.wicket.ajax.markup.html.AjaxLink;
  * Time: 4:59 PM
  *
  */
-public class ContextMenuItem
+public class ContextMenuItem implements IListItemOption
 {
     private String key;
     private String name;
@@ -19,6 +20,15 @@ public class ContextMenuItem
     {
         this.key = key;
         this.name = name;
+    }
+
+    public CharSequence getJavascriptOption()
+    {
+        StringBuilder buffer = new StringBuilder(key).append(":{")
+            .append("name:'").append(name).append("',")
+            .append("callback:function(key,opt){window.location='http://www.ibm.com'}")
+            .append("}");
+        return buffer.toString();
     }
 
     public AjaxLink getCallback()
