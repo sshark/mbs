@@ -20,8 +20,6 @@ import org.odlabs.wiquery.ui.commons.WiQueryUIPlugin;
 @WiQueryUIPlugin
 public class ContextMenu extends Behavior implements IWiQueryPlugin
 {
-
-
     private ContextMenuOptions options;
 
     public JsStatement statement()

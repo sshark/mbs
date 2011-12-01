@@ -1,6 +1,7 @@
 package org.thlim.demo;
 
 import org.apache.wicket.markup.html.WebPage;
+import org.odlabs.wiquery.core.javascript.JsStatement;
 import org.thlim.widgets.contextmenu.ContextMenu;
 import org.thlim.widgets.contextmenu.ContextMenuItem;
 import org.thlim.widgets.contextmenu.ContextMenuOptions;
@@ -18,7 +19,12 @@ public class ContextMenuDemoPage extends WebPage
     {
         ContextMenu menu = ContextMenu.forClass("contextMenu");
         ContextMenuOptions options = menu.getOptions();
-        options.add(new ContextMenuItem("view", "View dashboard"));
+        options.add(new ContextMenuItem("view",
+            "View dashboard",
+            new JsStatement().append("window.open('http://www.ibm.com')")));
+        options.add(new ContextMenuItem("edit",
+            "Edit dashboard",
+            new JsStatement().append("window.open('http://www.google.com')")));
         add(menu);
     }
 }
