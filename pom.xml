@@ -5,7 +5,7 @@
     <groupId>org.thlim</groupId>
     <artifactId>mbs-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <name>Multi Boxes Selection Parent</name>
     <modules>
         <module>mbs-core</module>
@@ -63,15 +63,7 @@
                 <version>${wicket.version}</version>
             </dependency>
 
-            <!-- Jetty 6 Web Server -->
-            <dependency>
-                <groupId>org.mortbay.jetty</groupId>
-                <artifactId>jetty</artifactId>
-                <version>${jetty.version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!-- multiboxes selection -->
+            <!-- core -->
             <dependency>
                 <groupId>org.thlim</groupId>
                 <artifactId>mbs-core</artifactId>
@@ -108,6 +100,13 @@
             </snapshots>
         </repository>
     </repositories>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>Home Repository</id>
+            <name>Home Repository-snapshots</name>
+            <url>http://localhost:8081/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
     <properties>
         <wicket.version>1.5.3</wicket.version>
         <wicketstuff.version>1.5.3</wicketstuff.version>
