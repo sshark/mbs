@@ -1,6 +1,7 @@
 # Multi boxes selection
 ## Changelog :
 ### v.1.0: September 14th 2011 - Initial release
+### v.1.0-SNAPSHOT: December 4th 2011 - Convert to a common demo showcase web application
 
 ## License
 
@@ -30,11 +31,12 @@ This widget serves 2 purposes,
 
 ## Demo
 
-1. cd mbs-core
-2. mvn install
-3. cd mbs-demo
-4. mvn jetty:run
-5. Log on to [http://localhost:8080/mbs-demo/] (http://localhost:8080/mbs-demo/)
+In project root,
+
+1. mvn install 
+2. cd widget-demo
+3. mvn jetty:run
+4. Log on to [http://localhost:8080/demo/] (http://localhost:8080/demo/)
 
 Do not run mvn install on base directory unless you want to install both mbs-core and mbs-demo to your Maven repository.
 
