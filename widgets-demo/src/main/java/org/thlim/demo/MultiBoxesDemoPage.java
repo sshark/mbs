@@ -79,7 +79,7 @@ public class MultiBoxesDemoPage extends WebPage
                     buffer.setLength(buffer.length() - 2);
                 }
                 form.info("You have selected boxes " + buffer);
-                target.addComponent(numbersFeedbackPanel);
+                target.add(numbersFeedbackPanel);
             }
 
             @Override
@@ -87,7 +87,7 @@ public class MultiBoxesDemoPage extends WebPage
             {
                 form.error(numbersSelectionBoxes.getFeedbackMessage().getMessage());
                 numbersSelectionBoxes.getFeedbackMessage().markRendered();
-                target.addComponent(numbersFeedbackPanel);
+                target.add(numbersFeedbackPanel);
             }
         });
         add(numbersForm);
@@ -128,7 +128,7 @@ public class MultiBoxesDemoPage extends WebPage
                     buffer.setLength(buffer.length() - 2);
                 }
                 form.info("You have selected boxes " + buffer);
-                target.addComponent(alphabetsFeedbackPanel);
+                target.add(alphabetsFeedbackPanel);
             }
 
             @Override

@@ -1,5 +1,62 @@
 <html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <style type="text/css">
+        .catalog.ui-accordion {
+            width : 75%;
+        }
+
+        .catalog a {
+            display : block;
+            text-decoration : none;
+        }
+
+        .catalog a:hover {
+            text-decoration : underline;
+        }
+    </style>
+</head>
 <body>
-<div class="contextMenu" style="background-color:red;height:24px;width:24px;"></div>
+<div style="margin:0 auto;width:960px;">
+    <h1>Links to various brands websites</h1>
+    <div wicket:id="catalog" class="catalog">
+        <h3><a href="#">Cars
+            <div class="contextMenu" style="float:right;" id="cars"><img src="images/contextmenu-arrow.jpg" height="24"
+                                                                         width="24" border="0"/></div>
+            <div style="clear:both"></div>
+        </a></h3>
+        <div id="cars_menuitems">
+            <a href="http://www.bmw.com" target="_blank">BMW</a>
+            <a href="http://www.mercedes.com" target="_blank">Mercedes</a>
+            <a href="http://www.toyota.com" target="_blank">Toyota</a>
+            <a href="http://www.volkswagen.com" target="_blank">Volkswage</a>
+        </div>
+        <h3><a href="#">Watches
+            <div class="contextMenu" style="float:right;" id="watches"><img src="images/contextmenu-arrow.jpg"
+                                                                            height="24"
+                                                                            width="24" border="0"/></div>
+            <div style="clear:both"></div>
+        </a></h3>
+        <div id="watches_menuitems">
+            <a href="http://www.omegawatches.com" target="_blank">Omega</a>
+            <a href="http://www.rolex.com" target="_blank">Rolex</a>
+            <a href="http://www.patek.com" target="_blank">Patek</a>
+            <a href="http://www.seikowatches.com/products/grandseiko/index.html" target="_blank">Grand Seiko</a>
+        </div>
+        <h3><a href="#">News Portal
+            <div class="contextMenu" style="float:right;" id="news"><img src="images/contextmenu-arrow.jpg" height="24"
+                                                                         width="24" border="0"/></div>
+            <div style="clear:both"></div>
+        </a></h3>
+        <div id="news_menuitems">
+            <a href="http://www.guardian.co.uk" target="_blank">The Guardian</a>
+            <a href="http://www.washingtonpost.com/" target="_blank">Washington Post</a>
+            <a href="http://www.malaysiakini.com" target="_blank">Malaysiakini</a>
+            <a href="http://www.themalaysianinsider.com/" target="_blank">The Malaysian Insider</a>
+        </div>
+    </div>
+    <wicket:link>
+        <h3><a href="org.thlim.demo.DemoPage">Back to main demo page</a></h3>
+    </wicket:link>
+</div>
 </body>
 </html>

@@ -87,7 +87,7 @@ public class ContextMenuOptions implements Serializable
         return this;
     }
 
-    public ContextMenuOptions removeAutoHide()
+    public ContextMenuOptions cancelAutoHide()
     {
         options.put("autoHide", false);
         return this;
