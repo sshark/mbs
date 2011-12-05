@@ -6,7 +6,6 @@
         <groupId>org.thlim</groupId>
         <artifactId>mbs-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>contextmenu-core</artifactId>
     <name>Context Menu</name>

@@ -123,8 +123,13 @@
         <snapshotRepository>
             <id>Home Repository</id>
             <name>Home Repository-snapshots</name>
-            <url>${binary.repos.url}</url>
+            <url>${snapshots.repos.url}</url>
         </snapshotRepository>
+        <repository>
+            <id>Home Repository</id>
+            <name>Home Repository-release</name>
+            <url>${release.repos.url}</url>
+        </repository>
     </distributionManagement>
     <properties>
         <wicket.version>1.5.3</wicket.version>
