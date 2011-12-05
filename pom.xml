@@ -44,7 +44,6 @@
                         <debug>false</debug>
                     </configuration>
                 </plugin>
-                
             </plugins>
         </pluginManagement>
     </build>
@@ -124,7 +123,7 @@
         <snapshotRepository>
             <id>Home Repository</id>
             <name>Home Repository-snapshots</name>
-            <url>http://localhost:8081/artifactory/libs-snapshot-local</url>
+            <url>${binary.repos.url}</url>
         </snapshotRepository>
     </distributionManagement>
     <properties>
