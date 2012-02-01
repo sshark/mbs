@@ -50,9 +50,9 @@ public class ContextMenu extends Behavior implements IWiQueryPlugin
     @Override
     public void renderHead(Component component, IHeaderResponse response)
     {
-        response.renderJavaScriptReference(new PackageResourceReference(getClass(), "jquery.ui.position.js"));
-        response.renderJavaScriptReference(new PackageResourceReference(getClass(), "jquery.contextMenu.js"));
-        response.renderCSSReference(new CssResourceReference(getClass(), "jquery.contextMenu.css"));
+        response.renderJavaScriptReference(new PackageResourceReference(getClass(), "js/jquery.ui.position.js"));
+        response.renderJavaScriptReference(new PackageResourceReference(getClass(), "js/jquery.contextMenu.js"));
+        response.renderCSSReference(new CssResourceReference(getClass(), "css/jquery.contextMenu.css"));
     }
 
     public static ContextMenu forClass(String selector)

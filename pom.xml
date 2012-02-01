@@ -3,14 +3,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.thlim</groupId>
-    <artifactId>mbs-parent</artifactId>
+    <artifactId>widgets-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>Multi Boxes Selection Parent</name>
+    <name>My Wicket widgets</name>
     <modules>
         <module>mbs-core</module>
-        <module>contextmenu-core</module>
+        <module>context-menu-core</module>
         <module>widgets-demo</module>
+        <module>dynamic-selector-core</module>
     </modules>
 
     <licenses>
@@ -91,7 +92,13 @@
 
             <dependency>
                 <groupId>org.thlim</groupId>
-                <artifactId>contextmenu-core</artifactId>
+                <artifactId>context-menu-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.thlim</groupId>
+                <artifactId>dynamic-selector-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -123,16 +130,11 @@
         <snapshotRepository>
             <id>Home Repository</id>
             <name>Home Repository-snapshots</name>
-            <url>${snapshots.repos.url}</url>
+            <url>${binary.repos.url}</url>
         </snapshotRepository>
-        <repository>
-            <id>Home Repository</id>
-            <name>Home Repository-release</name>
-            <url>${release.repos.url}</url>
-        </repository>
     </distributionManagement>
     <properties>
-        <wicket.version>1.5.3</wicket.version>
+        <wicket.version>1.5-SNAPSHOT</wicket.version>
         <wicketstuff.version>1.5.3</wicketstuff.version>
         <wiquery.version>1.5-SNAPSHOT</wiquery.version>
         <jetty.version>7.4.2.v20110526</jetty.version>

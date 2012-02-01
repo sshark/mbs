@@ -7,20 +7,27 @@
         <artifactId>widgets-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>mbs-core</artifactId>
-    <packaging>jar</packaging>
-    <name>Multi Boxes Selection Core</name>
-    <description>Multi boxes selection widget with minimum and maximum selections control</description>
+    <artifactId>context-menu-core</artifactId>
+    <name>Context Menu</name>
+    <description>Context Menu</description>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Lim, Teck Hooi</name>
+            <email>sshark@gmail.com</email>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
 
     <dependencies>
-
-        <!--  WICKET DEPENDENCIES -->
-        <dependency>
-            <groupId>org.apache.wicket</groupId>
-            <artifactId>wicket-core</artifactId>
-        </dependency>
-
-        <!-- WIQUERY DEPENDENCIES -->
         <dependency>
             <groupId>org.odlabs.wiquery</groupId>
             <artifactId>wiquery-core</artifactId>
@@ -29,6 +36,12 @@
         <dependency>
             <groupId>org.odlabs.wiquery</groupId>
             <artifactId>wiquery-jquery-ui</artifactId>
+        </dependency>
+
+        <!--  WICKET DEPENDENCIES -->
+        <dependency>
+            <groupId>org.apache.wicket</groupId>
+            <artifactId>wicket-core</artifactId>
         </dependency>
 
         <!-- LOGGING DEPENDENCIES - LOG4J -->

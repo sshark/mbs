@@ -32,7 +32,7 @@ import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.request.resource.PackageResourceReference;
-import org.thlim.multiselection.MultiBoxesSelection;
+import org.thlim.widgets.multiselection.MultiBoxesSelection;
 
 public class MultiBoxesDemoPage extends WebPage
 {
