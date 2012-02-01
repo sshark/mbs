@@ -5,7 +5,6 @@ import org.apache.wicket.behavior.Behavior;
 import org.apache.wicket.markup.html.IHeaderResponse;
 import org.apache.wicket.request.resource.CssResourceReference;
 import org.apache.wicket.request.resource.PackageResourceReference;
-import org.odlabs.wiquery.core.IWiQueryPlugin;
 import org.odlabs.wiquery.core.javascript.JsStatement;
 import org.odlabs.wiquery.ui.commons.WiQueryUIPlugin;
 
@@ -18,7 +17,7 @@ import org.odlabs.wiquery.ui.commons.WiQueryUIPlugin;
  */
 
 @WiQueryUIPlugin
-public class ContextMenu extends Behavior implements IWiQueryPlugin
+public class ContextMenu extends Behavior
 {
     private ContextMenuOptions options;
 
