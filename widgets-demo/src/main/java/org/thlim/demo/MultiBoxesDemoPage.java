@@ -148,6 +148,6 @@ public class MultiBoxesDemoPage extends WebPage
     @Override
     public void renderHead(IHeaderResponse response)
     {
-        response.renderCSSReference(new PackageResourceReference(getClass(), "multiboxes-demo.css"));
+        response.renderCSSReference(new PackageResourceReference(getClass(), "css/demo.css"));
     }
 }

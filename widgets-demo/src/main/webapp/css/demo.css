@@ -1,0 +1,35 @@
+.demo {
+    margin:0 auto;
+    width:1050px;
+}
+
+.demo form {
+    width:500px;
+    display:inline-block;
+    vertical-align:top
+}
+.demo .MultiBoxesSelection li {
+    font-size: 4em;
+}
+
+.selection-box {
+    width:500px
+}
+
+.demo-description {
+    clear:both;
+}
+
+.feedbackPanel {
+    font-size: 1.5em;
+    padding-left:0;
+    list-style-type: none
+}
+
+.clear-block {
+    clear : both;
+}
+
+#back-to-main {
+    margin-top : 20px;
+}

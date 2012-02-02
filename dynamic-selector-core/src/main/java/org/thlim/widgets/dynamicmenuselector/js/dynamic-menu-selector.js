@@ -19,23 +19,20 @@
 
     $.widget('ui.dynamicMenuSelector', {
         _init : function() {
-            this.element.children('.menu-item-selector').html(this.element.find('.selected a').html());
+            var menu = this.element;
+            menu.find('.selected-menu-item-name').html(menu.find('.selected a').html());
+            menu.children('.menu-item').click(function(e) {
+                menu.children('.selected').toggleClass('selected');
+                var selected = $(this);
+                menu.find('.selected-menu-item-name').html(selected.children('a').html())
+                menu.children('.menu-item-selector').animate({'top': $(this).position().top - 8},
+                    'fast', function() {
+                        selected.toggleClass('selected');
+                    });
+                });
         }
     })
 
     $.extend($.ui.dynamicMenuSelector, {});
 
 })(jQuery);
-
-/*
-            $('.menu-item').click(function(e) { +
-                            $('ul').children('.selected').toggleClass('selected'); +
-                            var selected = $(this); +
-                            $('.selected-menu-item-name').html(selector.children('a').html()) +
-                            $('.menu-item-selector').animate({'top': $(this).position().top - 8}, +
-                                'fast', +
-                                function() { +
-                                    selected.toggleClass('selected'); +
-                                    $('.selected').html(selector.children('a').html()) +
-                                }););
-                */

@@ -6,6 +6,7 @@ import org.apache.wicket.Component;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 import org.thlim.widgets.dynamicmenuselector.DynamicMenuSelector;
 import org.thlim.widgets.dynamicmenuselector.MenuLinkItem;
@@ -21,7 +22,7 @@ public class DynamicMenuSelectorDemoPage extends WebPage
 {
     public DynamicMenuSelectorDemoPage()
     {
-        Component content = new Label("content", "Content will be available soon.").setOutputMarkupId(true);
+        Component content = new Label("content", "Laco").setOutputMarkupId(true);
         add(new DynamicMenuSelector("menu", new Model(createLinkItem(content))));
         add(content);
     }
@@ -35,6 +36,8 @@ public class DynamicMenuSelectorDemoPage extends WebPage
             protected void execute(AjaxRequestTarget target)
             {
                 target.add(component);
+                IModel<String> model = (IModel<String>) component.getDefaultModel();
+                model.setObject("Laco");
             }
         });
 
@@ -44,6 +47,8 @@ public class DynamicMenuSelectorDemoPage extends WebPage
             protected void execute(AjaxRequestTarget target)
             {
                 target.add(component);
+                IModel<String> model = (IModel<String>) component.getDefaultModel();
+                model.setObject("Sinn");
             }
         });
 
@@ -53,6 +58,8 @@ public class DynamicMenuSelectorDemoPage extends WebPage
             protected void execute(AjaxRequestTarget target)
             {
                 target.add(component);
+                IModel<String> model = (IModel<String>) component.getDefaultModel();
+                model.setObject("Wempe");
             }
         });
 
@@ -62,6 +69,8 @@ public class DynamicMenuSelectorDemoPage extends WebPage
             protected void execute(AjaxRequestTarget target)
             {
                 target.add(component);
+                IModel<String> model = (IModel<String>) component.getDefaultModel();
+                model.setObject("Lange");
             }
         });
 
@@ -71,6 +80,8 @@ public class DynamicMenuSelectorDemoPage extends WebPage
             protected void execute(AjaxRequestTarget target)
             {
                 target.add(component);
+                IModel<String> model = (IModel<String>) component.getDefaultModel();
+                model.setObject("Glashutte");
             }
         });
         return items;

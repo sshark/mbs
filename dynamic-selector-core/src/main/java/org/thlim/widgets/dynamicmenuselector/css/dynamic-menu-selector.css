@@ -1,12 +1,12 @@
 .dynamic-menu-selector {
     position : relative;
     list-style-type: none;
+    width:250px;
 }
 
 .dynamic-menu-selector .menu-item {
     margin-left : 10px;
     height : 40px;
-    width : 100%;
     position : relative;
     <!-- border : 1px red solid; -->
 }
@@ -31,7 +31,7 @@
     font-weight : bold;
 }
 
-.dynamic-menu-selector .menu-item-selector .project-name {
+.dynamic-menu-selector .menu-item-selector .selected-menu-item-name {
     margin-top : 22px;
     margin-left : 20px;
     width : 180px;
