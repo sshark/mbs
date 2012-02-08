@@ -1,5 +1,5 @@
 <html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
-<head>
+<wicket:head>
     <link type="text/css" rel="stylesheet" href="css/reset.css"/>
     <link type="text/css" rel="stylesheet" href="css/base.css"/>
     <link type="text/css" rel="stylesheet" href="css/demo.css"/>
@@ -16,13 +16,26 @@
         #content {
             float : left;
             width : 70%;
+            height : 80%;
+        }
+
+        .demo .dynamic-menu-selector .menu-item-selector .selected-menu-item-name {
+            margin-top : 18px;
+        }
+
+        .demo .dynamic-menu-selector .menu-item-selector {
+            border-radius : 4px;
+            background-color : #f0f0f0;
+            box-shadow: 4px 4px 4px #888888;
+            background-image : none;
+            height : 50px;
         }
     </style>
-</head>
+</wicket:head>
 <body>
 <div class="demo">
     <div wicket:id="menu" id="menu"></div>
-    <div wicket:id="content" id="content"></div>
+    <iframe wicket:id="content" id="content"></iframe>
     <div class="clear-block"></div>
     <div id="back-to-main">
         <wicket:link>

@@ -1,10 +1,10 @@
 package org.thlim.widgets.contextmenu;
 
 import org.apache.wicket.Component;
-import org.apache.wicket.behavior.Behavior;
 import org.apache.wicket.markup.html.IHeaderResponse;
 import org.apache.wicket.request.resource.CssResourceReference;
 import org.apache.wicket.request.resource.PackageResourceReference;
+import org.odlabs.wiquery.core.behavior.WiQueryAbstractBehavior;
 import org.odlabs.wiquery.core.javascript.JsStatement;
 import org.odlabs.wiquery.ui.commons.WiQueryUIPlugin;
 
@@ -17,10 +17,11 @@ import org.odlabs.wiquery.ui.commons.WiQueryUIPlugin;
  */
 
 @WiQueryUIPlugin
-public class ContextMenu extends Behavior
+public class ContextMenu extends WiQueryAbstractBehavior
 {
     private ContextMenuOptions options;
 
+    @Override
     public JsStatement statement()
     {
         return new JsStatement().$().chain("contextMenu", options.getJavaScriptOptions());

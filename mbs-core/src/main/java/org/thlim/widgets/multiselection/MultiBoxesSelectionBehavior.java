@@ -44,6 +44,7 @@ public class MultiBoxesSelectionBehavior extends WiQueryAbstractBehavior
         return this;
     }
 
+    @Override
     public JsStatement statement()
     {
         JsStatement statement;

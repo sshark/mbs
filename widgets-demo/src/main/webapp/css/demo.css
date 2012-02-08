@@ -12,6 +12,11 @@
     font-size: 4em;
 }
 
+.demo .MultiBoxesSelection li span {
+    margin-top : 12px;
+    display : inline-block;
+}
+
 .selection-box {
     width:500px
 }
@@ -32,4 +37,13 @@
 
 #back-to-main {
     margin-top : 20px;
+}
+
+.demo h1 {
+    font-size : 14pt;
+}
+
+.demo .feedbackPanel {
+    margin-top : 4px;
+    width : 426px;
 }

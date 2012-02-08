@@ -2,10 +2,11 @@ package org.thlim.demo;
 
 import java.util.ArrayList;
 
+import org.apache.wicket.AttributeModifier;
 import org.apache.wicket.Component;
 import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.WebPage;
-import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 import org.thlim.widgets.dynamicmenuselector.DynamicMenuSelector;
@@ -20,9 +21,13 @@ import org.thlim.widgets.dynamicmenuselector.MenuLinkItem;
  */
 public class DynamicMenuSelectorDemoPage extends WebPage
 {
+    IModel<String> urlModel = new Model<String>("http://www.steinhartwatches.de/");
+
     public DynamicMenuSelectorDemoPage()
     {
-        Component content = new Label("content", "Laco").setOutputMarkupId(true);
+        Component content = new WebMarkupContainer("content")
+            .add(new AttributeModifier("src", urlModel))
+            .setOutputMarkupId(true);
         add(new DynamicMenuSelector("menu", new Model(createLinkItem(content))));
         add(content);
     }
@@ -30,14 +35,13 @@ public class DynamicMenuSelectorDemoPage extends WebPage
     private ArrayList<MenuLinkItem> createLinkItem(final Component component)
     {
         ArrayList<MenuLinkItem> items = new ArrayList<MenuLinkItem>();
-        items.add(new MenuLinkItem("Laco")
+        items.add(new MenuLinkItem("Steinhart")
         {
             @Override
             protected void execute(AjaxRequestTarget target)
             {
                 target.add(component);
-                IModel<String> model = (IModel<String>) component.getDefaultModel();
-                model.setObject("Laco");
+                urlModel.setObject("http://www.steinhartwatches.de/");
             }
         });
 
@@ -47,8 +51,7 @@ public class DynamicMenuSelectorDemoPage extends WebPage
             protected void execute(AjaxRequestTarget target)
             {
                 target.add(component);
-                IModel<String> model = (IModel<String>) component.getDefaultModel();
-                model.setObject("Sinn");
+                urlModel.setObject("http://www.sinn.de/en/");
             }
         });
 
@@ -58,8 +61,7 @@ public class DynamicMenuSelectorDemoPage extends WebPage
             protected void execute(AjaxRequestTarget target)
             {
                 target.add(component);
-                IModel<String> model = (IModel<String>) component.getDefaultModel();
-                model.setObject("Wempe");
+                urlModel.setObject("http://www.wempe.de/index.htm");
             }
         });
 
@@ -69,19 +71,17 @@ public class DynamicMenuSelectorDemoPage extends WebPage
             protected void execute(AjaxRequestTarget target)
             {
                 target.add(component);
-                IModel<String> model = (IModel<String>) component.getDefaultModel();
-                model.setObject("Lange");
+                urlModel.setObject("http://www.alange-soehne.com/cms/en/index.html");
             }
         });
 
-        items.add(new MenuLinkItem("Glashutte")
+        items.add(new MenuLinkItem("Patek Philippe")
         {
             @Override
             protected void execute(AjaxRequestTarget target)
             {
                 target.add(component);
-                IModel<String> model = (IModel<String>) component.getDefaultModel();
-                model.setObject("Glashutte");
+                urlModel.setObject("http://www.patek.com/");
             }
         });
         return items;
